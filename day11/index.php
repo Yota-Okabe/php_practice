@@ -4,6 +4,9 @@
         // イメージはタンス
         // [0,1,2] 0番から数字が振られていく。
         // 下記、バナナを取り出したかったら、0を指定する。
+
+use function PHPSTORM_META\exitPoint;
+
     $fruits = ['バナナ', 'リンゴ', 'スイカ'];
     echo $fruits[0] , '<br>';
 
@@ -28,11 +31,11 @@
     switch ($var) {
     case 'male':
       // 処理
-    echo '男性です' . '<br>';
+    echo 'オス' . '<br>';
     break;
     case 'female' . '<br>':
       // 処理
-    echo '女性です' . '<br>';
+    echo 'メス' . '<br>';
     break;
     default:
       // 処理
@@ -50,7 +53,22 @@
     // 問題2
     // 正の整数1から9に、それぞれ3を掛けた数を半角スペース区切りで出力して下さい。
     for($i=1; $i<=9; $i++){
-        echo $i * 3 . "\t";
+        echo $i * 3 . "\t" . '<br>';
     }
-    
+
+    // 問題3 FizzBuzz問題
+    // 1~30の数字に対して、3の倍数は「Fizz」5の倍数は「Buzz」15の倍数は「FizzBuzz」
+    // それ以外は「入力された数字」を出力してください。全てに改行を入れること
+
+    for($i=1; $i<=30; $i++){
+        if($i%3==0 && $i%5==0){
+            echo 'FizzBuzz' . '<br>';
+        }elseif($i%5==0){
+            echo 'Buzz' . '<br>';
+        }elseif($i%3==0){
+            echo 'Fizz' . '<br>';
+        }else{
+            echo $i . '<br>';
+        }
+    }
 ?>
